@@ -243,6 +243,12 @@
 (rename-buffer "1111-shell")
 (shell)
 (rename-buffer "2222-shell")
+(shell)
+(rename-buffer "3333-shell")
+(shell)
+(rename-buffer "4444-shell")
+(shell)
+(rename-buffer "5555-shell")
 
 (shell)
 (rename-buffer "adb-shell")
@@ -556,3 +562,20 @@
 (prefer-coding-system 'euc-cn)
 (setq default-process-coding-system 'euc-cn)
 (setq-default pathname-coding-system 'euc-cn)
+
+;;w3m
+(add-to-list 'load-path "C:/Users/D's T/AppData/Roaming/.emacs.d/w3m-lisp")
+(add-to-list 'exec-path "D:/Program Files/emacs-24.3/w3m")
+(require 'w3m-load)
+(setq w3m-use-favicon nil)
+(setq w3m-command-arguments '("-cookie" "-F"))
+(setq w3m-use-cookies t)
+(setq w3m-home-page "http://www.baidu.com")
+(setq w3m-default-display-inline-image t) ;;display image
+(setq w3m-default-toggle-inline-image t) 
+
+;;windows git
+(setq explici-shell-file-name "D:/Program Files/git/Git/bin/bash.exe")
+(setq shell-file-name explicit-shell-file-name)
+(add-to-list 'exec-path "D:\Program Files\git\Git\bin")
+
