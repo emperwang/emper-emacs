@@ -578,4 +578,29 @@
 (setq explici-shell-file-name "D:/Program Files/git/Git/bin/bash.exe")
 (setq shell-file-name explicit-shell-file-name)
 (add-to-list 'exec-path "D:\Program Files\git\Git\bin")
+;;ruby
+;(require 'cygwin-mount)
+;(cygwin-mount-activate)
+
+;;emacs evernote-mode
+(setq evernote-username "544094478@qq.com")
+(setq enh-enclient-command "D:/Program Files/Ruby/Ruby193/bin/enclient.rb")
+(require 'evernote-mode)
+(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-0" "UTF8")) ;;option
+(add-to-list 'load-path "C:/Users/D's T/AppData/Roaming/.emacs.d/evernote-mode")
+
+;;add evernote-mode licience
+(setq evernote-developer-token "S=s601:U=68ed7f2:E=15bf06c9df9:C=15498bb6e88:P=1cd:A=en-devtoken:V=2:H=ef7d5e53d2e8fa43fc669247b4d2c615")
+
+(global-set-key "\C-cec" 'evernote-create-note)
+(global-set-key "\C-ceo" 'evernote-open-note)
+(global-set-key "\C-ces" 'evernote-search-notes)
+(global-set-key "\C-ceS" 'evernote-do-saved-search)
+(global-set-key "\C-cew" 'evernote-write-note)
+(global-set-key "\C-cep" 'evernote-post-region)
+(global-set-key "\C-ceb" 'evernote-broswer)
+
+
+
+
 
