@@ -6,7 +6,14 @@
 
 ;; .emacs
 
-
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(set-file-name-coding-system 'utf-8)
+(set-clipboard-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8) 
 
 ;; Don't display menu bar. Type M-x menu-bar-mode to display it
 (menu-bar-mode '-1)
@@ -223,46 +230,46 @@
 
 ;;(shell)
 ;;(rename-buffer "make-shell")
-(shell)
-(rename-buffer "1111-shell")
-(shell)
-(rename-buffer "2222-shell")
-(shell)
-(rename-buffer "3333-shell")
-(shell)
-(rename-buffer "4444-shell")
-(shell)
-(rename-buffer "5555-shell")
-
-(shell)
-(rename-buffer "adb-shell")
-
-(eshell)
-(rename-buffer "boot-shell")
-(eshell)
-(rename-buffer "kernel-shell")
-(eshell)
-(rename-buffer "nfsroot-shell")
-(eshell)
-(rename-buffer "tftboot-shell")
-(eshell)
-(rename-buffer "svnshell")
-(eshell)
-(rename-buffer "work-shell")
-
-(eshell)
-(rename-buffer "ffff-shell")
-(eshell)
-(rename-buffer "eeee-shell")
-(eshell)
-(rename-buffer "dddd-shell")
-(eshell)
-(rename-buffer "cccc-shell")
-(eshell)
-(rename-buffer "bbbb-shell")
-(eshell)
-(rename-buffer "aaaa-shell")
-
+;;(shell)
+;;(rename-buffer "1111-shell")
+;;(shell)
+;;(rename-buffer "2222-shell")
+;;(shell)
+;;(rename-buffer "3333-shell")
+;;(shell)
+;;(rename-buffer "4444-shell")
+;;(shell)
+;;(rename-buffer "5555-shell")
+;;
+;;(shell)
+;;(rename-buffer "adb-shell")
+;;
+;;(eshell)
+;;(rename-buffer "boot-shell")
+;;(eshell)
+;;(rename-buffer "kernel-shell")
+;;(eshell)
+;;(rename-buffer "nfsroot-shell")
+;;(eshell)
+;;(rename-buffer "tftboot-shell")
+;;(eshell)
+;;(rename-buffer "svnshell")
+;;(eshell)
+;;(rename-buffer "work-shell")
+;;
+;;(eshell)
+;;(rename-buffer "ffff-shell")
+;;(eshell)
+;;(rename-buffer "eeee-shell")
+;;(eshell)
+;;(rename-buffer "dddd-shell")
+;;(eshell)
+;;(rename-buffer "cccc-shell")
+;;(eshell)
+;;(rename-buffer "bbbb-shell")
+;;(eshell)
+;;(rename-buffer "aaaa-shell")
+;;
 
 (show-paren-mode)
 (global-auto-revert-mode)
@@ -400,6 +407,7 @@
 ;(ecb-minor-mode)
 ;(ecb-hide-ecb-windows '-1)
 
+(add-to-list 'load-path "~/.emacs.d/popup")
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (require 'auto-complete)
@@ -465,7 +473,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-
 (add-to-list 'load-path' "~/.emacs.d/xcscope")
 (require 'xcscope)
 (add-hook 'c-mode-common-hook '(lambda() (require 'xcscope)))
@@ -485,19 +492,15 @@
 (define-key global-map [(meta f10)]    'cscope-display-buffer-toggle)
 
 
-
-(require 'window-numbering)
-(window-numbering-mode 1)
-
 ;;git-emacs
-(add-to-list 'load-path "~/.emacs.d/git-emacs/")
+(add-to-list 'load-path "~/.emacs.d/git-emacs")
 (require 'git-emacs)
 
-(add-to-list 'load-path "~/.emacs.d/")
-(require 'session)
+(add-to-list 'load-path "~/.emacs.d/sessions")
+(require 'sessions)
 (add-hook 'after-init-hook  'session-initialize)
-(add-to-list 'load-path "~/.emacs.d/doxymacs/no-autoconf/")
-(require 'doxymacs)
+;(add-to-list 'load-path "~/.emacs.d/doxymacs/no-autoconf/")
+;(require 'doxymacs)
 (add-to-list 'load-path "~/.emacs.d/cedet/")
 (require 'cedet)
 
@@ -521,15 +524,15 @@
 ;(kill-this-buffer);;关闭customize窗口
 
 ;;[Code]
-(set-language-environment 'Chinese-GB)
-(set-keyboard-coding-system 'euc-cn)
-(set-clipboard-coding-system 'euc-cn)
-(set-terminal-coding-system 'euc-cn)
-(set-buffer-file-coding-system 'euc-cn)
-(set-selection-coding-system 'euc-cn)
-(prefer-coding-system 'euc-cn)
-(setq default-process-coding-system 'euc-cn)
-(setq-default pathname-coding-system 'euc-cn)
+;;(set-language-environment 'Chinese-GB)
+;(set-keyboard-coding-system 'euc-cn)
+;(set-clipboard-coding-system 'euc-cn)
+;(set-terminal-coding-system 'euc-cn)
+;(set-buffer-file-coding-system 'euc-cn)
+;(set-selection-coding-system 'euc-cn)
+;(prefer-coding-system 'euc-cn)
+;(setq default-process-coding-system 'euc-cn)
+;(setq-default pathname-coding-system 'euc-cn)
 
 ;;w3m
 (add-to-list 'load-path "~/.emacs.d/w3m-lisp")
@@ -552,23 +555,23 @@
 ;(cygwin-mount-activate)
 
 ;;emacs evernote-mode
-(setq evernote-username "544094478@qq.com")
-(setq enh-enclient-command "~/.emacs.d/enclient.rb")
-(require 'evernote-mode)
-(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-0" "UTF8")) ;;option
-(add-to-list 'load-path "~/.emacs.d/evernote-mode")
-
-;;add evernote-mode licience
-(setq evernote-developer-token "S=s601:U=68ed7f2:E=15bf06c9df9:C=15498bb6e88:P=1cd:A=en-devtoken:V=2:H=ef7d5e53d2e8fa43fc669247b4d2c615")
-
-(global-set-key "\C-cec" 'evernote-create-note)
-(global-set-key "\C-ceo" 'evernote-open-note)
-(global-set-key "\C-ces" 'evernote-search-notes)
-(global-set-key "\C-ceS" 'evernote-do-saved-search)
-(global-set-key "\C-cew" 'evernote-write-note)
-(global-set-key "\C-cep" 'evernote-post-region)
-(global-set-key "\C-ceb" 'evernote-broswer)
-
+;(setq evernote-username "544094478@qq.com")
+;(setq enh-enclient-command "~/.emacs.d/evernote-mode/ruby/bin/enclient.rb")
+;(require 'evernote-mode)
+;(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-0" "UTF8")) ;;option
+;(add-to-list 'load-path "~/.emacs.d/evernote-mode")
+;
+;;;add evernote-mode licience
+;(setq evernote-developer-token "S=s601:U=68ed7f2:E=15bf06c9df9:C=15498bb6e88:P=1cd:A=en-devtoken:V=2:H=ef7d5e53d2e8fa43fc669247b4d2c615")
+;
+;(global-set-key "\C-cec" 'evernote-create-note)
+;(global-set-key "\C-ceo" 'evernote-open-note)
+;(global-set-key "\C-ces" 'evernote-search-notes)
+;;(global-set-key "\C-ceS" 'evernote-do-saved-search)
+;(global-set-key "\C-cew" 'evernote-write-note)
+;(global-set-key "\C-cep" 'evernote-post-region)
+;(global-set-key "\C-ceb" 'evernote-broswer)
+;
 
 
 

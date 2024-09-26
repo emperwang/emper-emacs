@@ -10,3 +10,15 @@
 [submodule "doxymacs"]
 	path = doxymacs
 	url = git@github.com:pniedzielski/doxymacs.git
+[submodule "xcscope"]
+	path = xcscope
+	url = git@github.com:dkogan/xcscope.el.git
+[submodule "sessions"]
+	path = sessions
+	url = git@github.com:frolosofsky/emacs-sessions.git
+[submodule "git-emacs"]
+	path = git-emacs
+	url = git@github.com:tsgates/git-emacs.git
+[submodule "magit"]
+	path = magit
+	url = git@github.com:magit/magit.git
