@@ -7,3 +7,6 @@
 [submodule "popup"]
 	path = popup
 	url = git@github.com:auto-complete/popup-el.git
+[submodule "doxymacs"]
+	path = doxymacs
+	url = git@github.com:pniedzielski/doxymacs.git
