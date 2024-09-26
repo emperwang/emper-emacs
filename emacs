@@ -16,8 +16,11 @@
 
 ;;设置滚动栏在窗口右侧，默认是在左侧
 (customize-set-variable 'scroll-bar-mode' left)
-;; line number
-(setq column-number-mode t)
+
+; line number
+(setq column-number-mode t) 
+(setq line-number-mode t)
+
 ;;关闭出错时的提示声
 (setq visible-bell t)
 
@@ -398,7 +401,7 @@
 ;(ecb-hide-ecb-windows '-1)
 
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
 (require 'auto-complete)
 (global-auto-complete-mode t)
 (setq ac-auto-start 3)
@@ -461,11 +464,7 @@
   (compilation-start (concat "python ~/bin/cpplint.py " (buffer-file-name))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq column-number-mode t) 
-(setq line-number-mode t)
 
-
-;;LOAD_PATH       
 
 (add-to-list 'load-path' "~/.emacs.d/xcscope")
 (require 'xcscope)
@@ -533,8 +532,8 @@
 (setq-default pathname-coding-system 'euc-cn)
 
 ;;w3m
-(add-to-list 'load-path "C:/Users/D's T/AppData/Roaming/.emacs.d/w3m-lisp")
-(add-to-list 'exec-path "D:/Program Files/emacs-24.3/w3m")
+(add-to-list 'load-path "~/.emacs.d/w3m-lisp")
+(add-to-list 'exec-path "/usr/bin/w3m")
 (require 'w3m-load)
 (setq w3m-use-favicon nil)
 (setq w3m-command-arguments '("-cookie" "-F"))
@@ -544,19 +543,19 @@
 (setq w3m-default-toggle-inline-image t) 
 
 ;;windows git
-(setq explici-shell-file-name "D:/Program Files/git/Git/bin/bash.exe")
-(setq shell-file-name explicit-shell-file-name)
-(add-to-list 'exec-path "D:\Program Files\git\Git\bin")
+;(setq explici-shell-file-name "D:/Program Files/git/Git/bin/bash.exe")
+;(setq shell-file-name explicit-shell-file-name)
+;(add-to-list 'exec-path "D:\Program Files\git\Git\bin")
 ;;ruby
 ;(require 'cygwin-mount)
 ;(cygwin-mount-activate)
 
 ;;emacs evernote-mode
 (setq evernote-username "544094478@qq.com")
-(setq enh-enclient-command "D:/Program Files/Ruby/Ruby193/bin/enclient.rb")
+(setq enh-enclient-command "~/.emacs.d/enclient.rb")
 (require 'evernote-mode)
 (setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-0" "UTF8")) ;;option
-(add-to-list 'load-path "C:/Users/D's T/AppData/Roaming/.emacs.d/evernote-mode")
+(add-to-list 'load-path "~/.emacs.d/evernote-mode")
 
 ;;add evernote-mode licience
 (setq evernote-developer-token "S=s601:U=68ed7f2:E=15bf06c9df9:C=15498bb6e88:P=1cd:A=en-devtoken:V=2:H=ef7d5e53d2e8fa43fc669247b4d2c615")

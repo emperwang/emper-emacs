@@ -1,3 +1,9 @@
 [submodule "emacs-color-theme-solarized"]
 	path = emacs-color-theme-solarized
 	url = git@github.com:sellout/emacs-color-theme-solarized.git
+[submodule "auto-complete"]
+	path = auto-complete
+	url = git@github.com:auto-complete/auto-complete.git
+[submodule "popup"]
+	path = popup
+	url = git@github.com:auto-complete/popup-el.git
