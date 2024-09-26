@@ -16,6 +16,7 @@
 
 ;;设置滚动栏在窗口右侧，默认是在左侧
 (customize-set-variable 'scroll-bar-mode' left)
+;; line number
 
 ;;关闭出错时的提示声
 (setq visible-bell t)
@@ -121,10 +122,10 @@
 
 
 
-(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-oswald)
+(add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized")
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;(color-theme-oswald)
 
 
 
