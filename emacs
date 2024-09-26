@@ -496,7 +496,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (require 'session)
 (add-hook 'after-init-hook  'session-initialize)
-(add-to-list 'load-path "~/.emacs.d/doxymacs-1.8.0/no-autoconf/")
+(add-to-list 'load-path "~/.emacs.d/doxymacs/no-autoconf/")
 (require 'doxymacs)
 (add-to-list 'load-path "~/.emacs.d/cedet/")
 (require 'cedet)
@@ -533,6 +533,7 @@
 
 ;;w3m
 (add-to-list 'load-path "~/.emacs.d/w3m-lisp")
+;; apt install w3m
 (add-to-list 'exec-path "/usr/bin/w3m")
 (require 'w3m-load)
 (setq w3m-use-favicon nil)
