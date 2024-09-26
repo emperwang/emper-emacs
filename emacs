@@ -17,7 +17,7 @@
 ;;设置滚动栏在窗口右侧，默认是在左侧
 (customize-set-variable 'scroll-bar-mode' left)
 ;; line number
-
+(setq column-number-mode t)
 ;;关闭出错时的提示声
 (setq visible-bell t)
 
@@ -43,7 +43,7 @@
 ;(setq auto-image-file-mode t)
 
 ;; 不自动保存模式
-;(setq auto-save-mode nil)
+(setq auto-save-mode nil)
 
 ;;允许emacs和外部其他程序的粘贴
 (setq x-select-enable-clipboard t)
@@ -156,12 +156,6 @@
 (global-set-key (kbd "C-z") 'ctl-z-map) 
 
 
-
-;; This maps edit keys to standard Windows keystokes. It requires the
-;; library cua-mode.el from Kim Storm at the following URL:
-;;(load "~/.emacs.d/cua-mode.el")
-;;(CUA-mode t)
-
 ;; Set foreground and background. black or dimgrey may be choosed
 (set-foreground-color "white")
 ;;(set-foreground-color "lightgreen")
@@ -224,20 +218,6 @@
 
 
 
-;    (defun eshell/vi (&rest args)
-;     "Invoke `find-file' on the file.
-;    \"vi +42 foo\" also goes to line 42 in the buffer."
-;      (while args
-;        (if (string-match "\\`\\+\\([0-9]+\\)\\'" (car args))
-;            (let* ((line (string-to-number (match-string 1 (pop args))))
-;                   (file (pop args)))
-;              (find-file file)
-;              (goto-line line))
-;          (find-file (pop args)))))
-
-
-
-
 ;;(shell)
 ;;(rename-buffer "make-shell")
 (shell)
@@ -294,13 +274,6 @@
 ;; enable visual feedback on selections
 (setq transient-mark-mode t)
 
-;; default to better frame titles
-;;(setq frame-title-format
-;;      (concat  "%b - emacs@" system-name))
-
-;(setq frame-title-format
-;      (concat  "%b - emacs@" "192.168.1.31"))
-
 (add-hook 'comint-output-filter-functions
 	'comint-watch-for-password-prompt)
 
@@ -308,7 +281,6 @@
 (setq display-time-day-and-date nil)
 (display-time)
 
-(column-number-mode t)
 
 (setq make-backup-files nil)
 
@@ -357,10 +329,6 @@
 ; Load CEDET
 ;(load-file "~/.emacs.d/cedet/common/cedet.el")
 
-; * This enables some tools useful for coding, such as summary mode
-;   imenu support, and the semantic navigator
-;(semantic-load-enable-code-helpers)
-;;(semantic-load-enable-excessive-code-helpers)
 
 (global-ede-mode t)
 ;(require 'semantic-ia)
