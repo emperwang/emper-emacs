@@ -6,6 +6,13 @@
 
 ;; .emacs
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -23,6 +30,9 @@
 
 ;;设置滚动栏在窗口右侧，默认是在左侧
 (customize-set-variable 'scroll-bar-mode' left)
+
+; package install check
+(setq package-check-signature nil)
 
 ; line number
 (setq display-line-numbers-mode t) 
@@ -116,19 +126,16 @@
 			my-c-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '(".*/*linux.*/+.*\\.[ch]$" .
 			linux-c-mode) auto-mode-alist))
+; dash
+(add-to-list 'load-path "~/.emacs.d/dash")
 
+; lisp server
+(add-to-list 'load-path "~/.emacs.d/lsp-mode")
 
-;; Add color to a shell running in emacs ‘M-x shell’
-;;(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-;;(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
-;;Then set the colors:
-
-;;(custom-set-faces
-;; custom-set-faces was added by Custom — don’t edit or cut/paste it!
-;; Your init file should contain only one such instance.
-;;'(comint-highlight-prompt ((t (:foreground "white")))))
-
+;; golang mode
+(add-to-list 'load-path "~/.emacs.d/go-mode")
+;(add-to-list 'go-mode "go-mode" nil t)
+;(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 
 (add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized")
@@ -270,7 +277,7 @@
 ;;(rename-buffer "aaaa-shell")
 ;;
 
-(show-paren-mode)
+(show-paren-mode t)
 (global-auto-revert-mode)
 
 ;;; uncomment this line to disable loading of "default.el" at startup

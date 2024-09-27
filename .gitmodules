@@ -22,3 +22,12 @@
 [submodule "magit"]
 	path = magit
 	url = git@github.com:magit/magit.git
+[submodule "go-mode"]
+	path = go-mode
+	url = git@github.com:dominikh/go-mode.el.git
+[submodule "lsp-mode"]
+	path = lsp-mode
+	url = git@github.com:emacs-lsp/lsp-mode.git
+[submodule "dash"]
+	path = dash
+	url = git@github.com:magnars/dash.el.git
