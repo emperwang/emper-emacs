@@ -23,8 +23,9 @@
                    (*linux* nil)
                    (t nil)))
 ;; line number
-(global-linum-mode 1) ; always show line numbers
-(setq linum-format "%d| ")  ;set format
+;(global-linum-mode 1) ; always show line numbers
+;(setq linum-format "%d| ")  ;set format
+
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)

@@ -25,17 +25,16 @@
 (customize-set-variable 'scroll-bar-mode' left)
 
 ; line number
-(setq column-number-mode t) 
-(setq line-number-mode t)
-
+(setq display-line-numbers-mode t) 
+(setq linum-format "%3d  ")
 ;;关闭出错时的提示声
 (setq visible-bell t)
 
 ;;关闭emacs启动时的画面
-(setq inhibit-startup-message t)
+(setq inhibit-startup-message nil)
 
 ;;关闭gnus启动时的画面
-(setq gnus-inhibit-startup-message t)
+(setq gnus-inhibit-startup-message nil)
 
 ;;允许屏幕左移
 (put 'scroll-left 'disabled nil) 
@@ -294,26 +293,6 @@
 
 (setq make-backup-files nil)
 
-;;(custom-set-variables '(next-line-add-newlines nil))
-
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(auto-compression-mode t nil (jka-compr))
- '(case-fold-search t)
- '(current-language-environment "UTF-8")
- '(default-input-method "rfc1345")
- '(ecb-options-version "2.40")
- '(ecb-source-path (quote ("~/work/Android/android-1.5r2-work" "~/work/Android/linux-2.6.27")))
- '(global-font-lock-mode t nil (font-lock))
- '(next-line-add-newlines nil)
- '(safe-local-variable-values (quote ((sh-indentation . 2))))
- '(semantic-c-dependency-system-include-path (quote ("~/work/Android/linux-2.6.27/include" "~/work/Android/android-1.5r2-work/bionic/libc/include" "~/work/Android/android-1.5r2-work/bionic/libc/kernel/common" "~/work/Android/android-1.5r2-work/system/core/include/cutils/")))
- '(show-paren-mode t nil (paren))
- '(transient-mark-mode t))
-
 (setq ps-font-size 8)
 (defun my-ps-print-buffer()
 	(interactive)
@@ -523,16 +502,7 @@
 ;(customize-group 'ansi-colors)
 ;(kill-this-buffer);;关闭customize窗口
 
-;;[Code]
-;;(set-language-environment 'Chinese-GB)
-;(set-keyboard-coding-system 'euc-cn)
-;(set-clipboard-coding-system 'euc-cn)
-;(set-terminal-coding-system 'euc-cn)
-;(set-buffer-file-coding-system 'euc-cn)
-;(set-selection-coding-system 'euc-cn)
-;(prefer-coding-system 'euc-cn)
-;(setq default-process-coding-system 'euc-cn)
-;(setq-default pathname-coding-system 'euc-cn)
+
 
 ;;w3m
 (add-to-list 'load-path "~/.emacs.d/w3m-lisp")
@@ -545,34 +515,6 @@
 (setq w3m-home-page "http://www.baidu.com")
 (setq w3m-default-display-inline-image t) ;;display image
 (setq w3m-default-toggle-inline-image t) 
-
-;;windows git
-;(setq explici-shell-file-name "D:/Program Files/git/Git/bin/bash.exe")
-;(setq shell-file-name explicit-shell-file-name)
-;(add-to-list 'exec-path "D:\Program Files\git\Git\bin")
-;;ruby
-;(require 'cygwin-mount)
-;(cygwin-mount-activate)
-
-;;emacs evernote-mode
-;(setq evernote-username "544094478@qq.com")
-;(setq enh-enclient-command "~/.emacs.d/evernote-mode/ruby/bin/enclient.rb")
-;(require 'evernote-mode)
-;(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-0" "UTF8")) ;;option
-;(add-to-list 'load-path "~/.emacs.d/evernote-mode")
-;
-;;;add evernote-mode licience
-;(setq evernote-developer-token "S=s601:U=68ed7f2:E=15bf06c9df9:C=15498bb6e88:P=1cd:A=en-devtoken:V=2:H=ef7d5e53d2e8fa43fc669247b4d2c615")
-;
-;(global-set-key "\C-cec" 'evernote-create-note)
-;(global-set-key "\C-ceo" 'evernote-open-note)
-;(global-set-key "\C-ces" 'evernote-search-notes)
-;;(global-set-key "\C-ceS" 'evernote-do-saved-search)
-;(global-set-key "\C-cew" 'evernote-write-note)
-;(global-set-key "\C-cep" 'evernote-post-region)
-;(global-set-key "\C-ceb" 'evernote-broswer)
-;
-
 
 
 
